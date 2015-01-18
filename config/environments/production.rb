@@ -19,15 +19,20 @@ Rails.application.configure do
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
-  # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = false
+  # Rails's static asset server
+  # Enable = true
+  # Disable = false (Apache or nginx will already do this).
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  # Rails looks at public/assets for precompiled assests and folders. Default for prod is false.
+  # When set to False: If it's empty rails does not fallback to app/assets directory.
+  # When set to True:  If it’s empty, it falls back to the app/assets directory and compiles on the fly.
+  # TODO Leaving as true because Landing page background images are not being precompiled. Need to address before changing back to false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true

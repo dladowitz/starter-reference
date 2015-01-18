@@ -8,8 +8,8 @@
               %span.sr-only Toggle navigation
               %i.fa.fa-bars
             %h1.navbar-brand
-              = image_tag "logo.png", height: 40
-              %a{:href => "#header"} Last Minute Gear
+              = image_tag "logo_right.png", height: 55
+              %a{:style => "font-size: 35px", :href => "#header"} Little Cat Labs
           #navbar-collapse-1.collapse.navbar-collapse
             %ul#navigation.nav.navbar-nav.navbar-right
               %li.active
@@ -30,7 +30,7 @@
     %main#main.site-main
       %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
         .carousel-inner
-          .item.active{:style => "background: url(assets/background/snowboard_wide_dark.png);"}
+          .item.active{:style => "background: url(assets/background/cat_1_wide_dark.png);"}
             .container
               = image_tag "background/hero_text_1.png"
       / <div class="item" style="background: url(assets/background/sri_lanka_wide_dark_2.jpg);">
@@ -42,20 +42,40 @@
       %section.section.section-center.section-cta
         .container
           %h2.section-title
-            %span Why Rent?
+            %span Wait, 50 percent?
           %h3
-            If you buy an expensive set of apparel, you’ll need to go often to make the investment worth it. By our calculations, if you spend $500 and go to Tahoe 3–5 times a year, you’ll need to use your apparel for 3–5 years to drive your average per trip cost down to $40 (rental apparel average).
+            We where shocked too. A Healthy cat should generally be under 10lbs. With half our cats being overweight and twenty percent obese its become an epidemic.
+
             %br
-            Want to see some hard numbers? Check out the
-            %a.text-primary{:href => "https://medium.com/@bsemaj/should-you-buy-your-own-snowsports-apparel-646ef5bbc3a3"} Maths
-            here.
-          .main-action.row
-            .col-md-4.col-md-offset-4.col-sm-4.col-sm-offset-2
-              %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "https://www.lastmingear.com/"} Start Renting
+            %br
+            .small.pull-left
+              %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} 2013 National Pet Obesity Awareness Day Survey
+            %br
+            .small.pull-left
+              %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} VCA Animal Hospitals
+            %br
+            .small.pull-left
+              %a.text-primary{:href => "http://www.2ndchance.info/diabetescat-obesityZoran.pdf"} Obesity in Cats and Dogs
+            %br
+            .small.pull-left
+              %a.text-primary{:href => "http://www.animalplanet.com/pets/healthy-pets/how-to-put-your-cat-on-a-diet/"} Animal Planet
+            %br
+            .small.pull-left
+              %a.text-primary{:href => "http://www.telegraph.co.uk/lifestyle/pets/10325705/Got-a-fat-pet-Its-just-comfort-eating-Cats-and-dogs-diagnosed-with-Bridget-Jones-syndrome.html"} Got a Fat Pet?
+
+      %section#register.section.section-center.section-hilite
+        .main-action.row
+          .col-md-1.col-md-offset-2.mt30
+            = image_tag "aiko_right.png", height: 100
+          .col-md-6.col-md-offset-0
+            %h3 We are in the processes of building an innovative toolset to help owners reduce the weight of their cats. Sign up to get email updates on our progress and suggestions on how to help your pet immediately.
+            %br
+          .col-md-4.col-md-offset-4.col-sm-4
+            %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "#"} Register to Hear More
 
       %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
         .carousel-inner
-          .item.active{:style => "background: url(assets/background/camping_wide_dark.png);"}
+          .item.active{:style => "background: url(assets/background/cat_4_wide_dark.png);"}
             .container
               = image_tag "background/hero_text_2.png"
       %section#features.section.section-center.section-features
