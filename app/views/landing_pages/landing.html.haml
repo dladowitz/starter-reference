@@ -8,8 +8,9 @@
               %span.sr-only Toggle navigation
               %i.fa.fa-bars
             %h1.navbar-brand
-              = image_tag "logo_right.png", height: 55
-              %a{:style => "font-size: 35px", :href => "#header"} Little Cat Labs
+
+              %a{:style => "font-size: 35px", :href => "#header"}
+                = image_tag "logo_handwriting.png", height: 55
           #navbar-collapse-1.collapse.navbar-collapse
             %ul#navigation.nav.navbar-nav.navbar-right
               %li.active
@@ -44,31 +45,35 @@
           %h2.section-title
             %span Wait, 50 percent?
           %h3
-            We where shocked too. A Healthy cat should generally be under 10lbs. With half our cats being overweight and twenty percent obese its become an epidemic.
+            We where shocked too. A healthy cat should generally be under 10lbs. With half our cats being overweight and twenty percent obese its become an epidemic.
 
-            %br
-            %br
-            .small.pull-left
-              %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} 2013 National Pet Obesity Awareness Day Survey
-            %br
-            .small.pull-left
-              %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} VCA Animal Hospitals
-            %br
-            .small.pull-left
-              %a.text-primary{:href => "http://www.2ndchance.info/diabetescat-obesityZoran.pdf"} Obesity in Cats and Dogs
-            %br
-            .small.pull-left
-              %a.text-primary{:href => "http://www.animalplanet.com/pets/healthy-pets/how-to-put-your-cat-on-a-diet/"} Animal Planet
-            %br
-            .small.pull-left
-              %a.text-primary{:href => "http://www.telegraph.co.uk/lifestyle/pets/10325705/Got-a-fat-pet-Its-just-comfort-eating-Cats-and-dogs-diagnosed-with-Bridget-Jones-syndrome.html"} Got a Fat Pet?
+          %br
+          %br
+
+          %h5.pull-left Sources:
+          %br
+          %br
+          .small.pull-left
+            %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} 2013 National Pet Obesity Awareness Day Survey
+          %br
+          .small.pull-left
+            %a.text-primary{:href => "http://www.petobesityprevention.org/pet-obesity-fact-risks/"} VCA Animal Hospitals
+          %br
+          .small.pull-left
+            %a.text-primary{:href => "http://www.2ndchance.info/diabetescat-obesityZoran.pdf"} Obesity in Cats and Dogs
+          %br
+          .small.pull-left
+            %a.text-primary{:href => "http://www.animalplanet.com/pets/healthy-pets/how-to-put-your-cat-on-a-diet/"} Animal Planet
+          %br
+          .small.pull-left
+            %a.text-primary{:href => "http://www.telegraph.co.uk/lifestyle/pets/10325705/Got-a-fat-pet-Its-just-comfort-eating-Cats-and-dogs-diagnosed-with-Bridget-Jones-syndrome.html"} Got a Fat Pet?
 
       %section#register.section.section-center.section-hilite
         .main-action.row
           .col-md-1.col-md-offset-2.mt30
             = image_tag "aiko_right.png", height: 100
           .col-md-6.col-md-offset-0
-            %h3 We are in the processes of building an innovative toolset to help owners reduce the weight of their cats. Sign up to get email updates on our progress and suggestions on how to help your pet immediately.
+            %h3 We are in the processes of building a set of tools to help owners reduce the weight of their cats. Sign up to get email updates on our progress and suggestions on how to help your pet immediately.
             %br
           .col-md-4.col-md-offset-4.col-sm-4
             %a.smooth-scroll.btn.btn-lg.btn-block.btn-danger{:href => "#"} Register to Hear More
@@ -85,19 +90,19 @@
           .row
             .col-md-4.col-sm-6
               .icon-wrap
-                = image_tag "news.png"
-              %h4 Select the gear that you need.
-              %p Apparel, camping, mountain sports and more. We've got a giant selection.
+                = image_tag "icons/scale_icon_2.png"
+              %h4 Automatic Weigh Ins
+              %p Place the wireless scale next to your cat's food. They'll weigh in every time they eat.
             .col-md-4.col-sm-6
               .icon-wrap
-                = image_tag "clock.png"
-              %h4 Schedule a delivery.
-              %p We'll bring the equipment right to your door at a time thats good for you.
+                = image_tag "icons/graph_icon.png"
+              %h4 Track Progress
+              %p They key to weight loss is knowing whats working and whats not.
             .col-md-4.col-sm-6
               .icon-wrap
-                = image_tag "ticket.png"
-              %h4 Pay what you think is fair.
-              %p We want everyone to afford the outdoors. Generally costs are less than 10% of purchasing new gear.
+                = image_tag "icons/devices_icon.png"
+              %h4 Stay Motivated
+              %p Check in on your phone, tablet and desktop devices.
       %section#carousel-1.carousel.slide.section-slide{"data-ride" => "carousel"}
         .carousel-inner
           .item.active{:style => "background: url(assets/background/backpacking_wide_dark.png);"}
