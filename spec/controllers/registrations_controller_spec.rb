@@ -44,4 +44,13 @@ describe RegistrationsController do
       end
     end
   end
+
+  describe "GET confirmation" do
+    subject { get :confirmation }
+
+    it "renders the confrimation template" do
+      subject
+      expect(response).to render_template :confirmation
+    end
+  end
 end

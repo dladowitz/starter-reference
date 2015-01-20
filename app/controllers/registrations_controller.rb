@@ -13,6 +13,10 @@ class RegistrationsController < ApplicationController
     end
   end
 
+  def confirmation
+    render layout: "landing_page/landing_layout"
+  end
+
   private
 
   def registration_params
