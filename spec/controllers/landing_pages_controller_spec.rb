@@ -18,5 +18,10 @@ describe LandingPagesController do
       subject
       expect(response).to render_template :register
     end
+
+    it "creates a new Registration object" do
+      subject
+      expect(assigns(:registration)).to be_a_new Registration
+    end
   end
 end
