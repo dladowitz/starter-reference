@@ -10,18 +10,4 @@ describe LandingPagesController do
       expect(response).to render_template :landing
     end
   end
-
-  describe "GET register" do
-    subject { get :register }
-
-    it "returns the register template" do
-      subject
-      expect(response).to render_template :register
-    end
-
-    it "creates a new Registration object" do
-      subject
-      expect(assigns(:registration)).to be_a_new Registration
-    end
-  end
 end

@@ -12,15 +12,16 @@ end
 
 Then /they see the register page/ do
   uri = URI.parse(current_url)
-  uri.path.should == register_path
+  expect(uri.path).to eq new_registration_path
 end
 
 And /they fill out the register form/ do
-  fill_in "email_address", with: "pepper@stark_labs.com"
-  # select "send_recommendation",  from: "expiry-year"
-  click_button "Register Now"
+  fill_in "registration_email", with: "alessandro@volta_labs.com"
+  click_button "Sign up to Hear More"
 end
 
 Then /they see the 'success' page/ do
   expect(page).to have_content "Thanks for Registering"
+  uri = URI.parse(current_url)
+  expect(uri.path).to eq confirmation_registrations_path
 end

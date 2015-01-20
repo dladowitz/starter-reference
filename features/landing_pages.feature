@@ -10,5 +10,4 @@ Feature: Landing pages
       And    they click on the 'register' link
       Then   they see the register page
       And    they fill out the register form
-      Then   they submit the register form
       Then   they see the 'success' page
