@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: "landing_pages#landing"
 
-  get :landing, to: "landing_pages#landing", as: :landing
+  get :landing,     to: "landing_pages#landing",      as: :landing
+  get :register,    to: "landing_pages#register",     as: :register
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
