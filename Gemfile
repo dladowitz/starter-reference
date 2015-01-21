@@ -33,6 +33,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.2.1'
   gem 'faker'
+  gem 'letter_opener'
   gem 'pry-byebug'
   gem 'quiet_assets'
   gem 'rspec-rails', '~> 3.0.0'

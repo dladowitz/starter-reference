@@ -7,6 +7,7 @@ class RegistrationsController < ApplicationController
 
   def create
     if @registration.save
+      UserMailer.registration_email(@registration).deliver
       redirect_to confirmation_registrations_path
     else
       render :new
