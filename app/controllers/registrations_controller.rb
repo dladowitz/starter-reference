@@ -7,7 +7,10 @@ class RegistrationsController < ApplicationController
 
   def create
     if @registration.save
+
+      #TODO Mailer should be sent asyncronously. Need to change so not to hold up the controller
       UserMailer.registration_email(@registration).deliver
+
       redirect_to confirmation_registrations_path
     else
       render :new
