@@ -21,7 +21,6 @@
   margin-left: 0px !important;
 }
 
-
 .t-align-left {
   text-align: left !important;
 }
@@ -33,6 +32,16 @@
 
 .purple {
   color: purple;
+}
+
+.blue {
+  color: blue;
+}
+
+/******** Text Decoration ********/
+
+.underline {
+  text-decoration: underline;
 }
 
 /******** Margins ********/
