@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get    :landing,     to: "landing_pages#landing",      as: :landing
 
+  resources :users
+
   resources :registrations, only: [:new, :create] do
     collection do
       get :confirmation, to: "registrations#confirmation"
