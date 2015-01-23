@@ -16,8 +16,8 @@ gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'momentjs-rails', '>= 2.8.1'
-gem 'therubyracer', platforms: :ruby
 gem 'sass-rails', '~> 4.0.3'
+gem 'therubyracer', platforms: :ruby
 gem 'thin'
 # gem 'validates_timeliness', '~> 3.0' #TODO Move back to official version on Rails 4.2. Currently throwing deprecation warnings in rspec.
 gem 'validates_timeliness', github: 'razum2um/validates_timeliness', ref: 'b195081f6aeead619430ad38b0f0dfe4d4981252'

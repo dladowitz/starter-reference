@@ -35,7 +35,7 @@
 }
 
 .blue {
-  color: blue;
+  color: blue !important;
 }
 
 /******** Text Decoration ********/
