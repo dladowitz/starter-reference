@@ -1,1 +1,14 @@
-I'm the new template
+= form_for @user do |f|
+  .form-group
+    = f.label :name, class: "label-control"
+    = f.text_field :name, class: "form-control"
+  .form-group
+    = f.label :email, class: "label-control"
+    = f.text_field :email, class: "form-control"
+  .form-group
+    = f.label :password, class: "label-control"
+    = f.text_field :password, class: "form-control"
+  .form-group
+    = f.label :password_confirmation, class: "label-control"
+    = f.text_field :password_confirmation, class: "form-control"
+

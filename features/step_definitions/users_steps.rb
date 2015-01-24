@@ -1,3 +1,8 @@
+Then /they visit the new user page/ do
+  visit new_user_path
+end
+
+
 Then /they fill out the new user form/ do
   uri = URI.parse(current_url)
   expect(uri.path).to eq new_user_path
