@@ -2,16 +2,20 @@
 #
 # Table name: users
 #
-#  id                    :integer          not null, primary key
-#  name                  :string(255)
-#  email                 :string(255)
-#  password              :string(255)
-#  password_confirmation :string(255)
-#  created_at            :datetime
-#  updated_at            :datetime
+#  id              :integer          not null, primary key
+#  first_name      :string(255)
+#  last_name       :string(255)
+#  email           :string(255)
+#  password_digest :string(255)
+#  admin           :boolean
+#  created_at      :datetime
+#  updated_at      :datetime
 #
 
 class User < ActiveRecord::Base
-  validates :name, :email, :password, :password_confirmation,  presence: true
-  validates :email, uniqueness: true
+  validates :first_name, presence: true
+  validates :email,      presence: true, uniqueness: true
+  validates :password,   presence: { on: create }, length: { minimum: 6 }, if: :password_digest_changed?
+
+  has_secure_password
 end

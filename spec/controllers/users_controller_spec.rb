@@ -17,7 +17,7 @@ describe UsersController do
   describe "POST create" do
 
     context "with valid params" do
-      subject { post :create, user: {name: "AndreAmpere", email: "Andre.Ampere@gmail.com", password: "asdfasdf", password_confirmation: "asdfasdf" } }
+      subject { post :create, user: {first_name: "Andre", email: "Andre.Ampere@gmail.com", password: "asdfasdf", password_confirmation: "asdfasdf" } }
 
       it "creates a new user in the database" do
         expect{ subject }.to change{ User.count }.by 1
@@ -25,7 +25,7 @@ describe UsersController do
     end
 
     context "with INVALID params" do
-      subject { post :create, user: {name: "AndreAmpere", email: nil, password: "asdfasdf", password_confirmation: nil } }
+      subject { post :create, user: {first_name: "Andre", email: nil, password: "asdfasdf", password_confirmation: nil } }
 
       it "does not create a new user in the database" do
         expect{ subject }.not_to change{ User.count }
