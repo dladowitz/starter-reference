@@ -10,7 +10,10 @@ Feature: Users features
     Then  they visit the new user page
 
     Then  they fill out the new user form
-    And   they see the user homepage
+    Then  they see the signin page
+
+# Uncomment when sessions are built
+#    And   they see the user homepage
 
 
 

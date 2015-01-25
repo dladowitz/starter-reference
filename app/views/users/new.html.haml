@@ -1,14 +1,26 @@
-= form_for @user do |f|
-  .form-group
-    = f.label :name, class: "label-control"
-    = f.text_field :name, class: "form-control"
-  .form-group
-    = f.label :email, class: "label-control"
-    = f.text_field :email, class: "form-control"
-  .form-group
-    = f.label :password, class: "label-control"
-    = f.text_field :password, class: "form-control"
-  .form-group
-    = f.label :password_confirmation, class: "label-control"
-    = f.text_field :password_confirmation, class: "form-control"
+.container
+  -#error div
+  - if @user.errors.any?
+    #error_explanation
+      %h2
+        Whooaa tiger, something has gone wrong.
 
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  = form_for @user do |f|
+    .form-group
+      = f.label :name, class: "label-control"
+      = f.text_field :name, class: "form-control"
+    .form-group
+      = f.label :email, class: "label-control"
+      = f.text_field :email, class: "form-control"
+    .form-group
+      = f.label :password, class: "label-control"
+      = f.text_field :password, class: "form-control"
+    .form-group
+      = f.label :password_confirmation, class: "label-control"
+      = f.text_field :password_confirmation, class: "form-control"
+    .form-group
+      = f.submit "Sign Up"

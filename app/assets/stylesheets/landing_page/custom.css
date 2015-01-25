@@ -24,8 +24,21 @@
 .t-align-left {
   text-align: left !important;
 }
-/******** Color ********/
 
+
+/******** errors ********/
+.field_with_errors {
+  padding: 2px;
+  background-color: darkorange;
+  display: table;
+}
+
+#error_explanation li {
+  color: red
+}
+
+
+/******** Color ********/
 .inherit-color {
   color: inherit;
 }
@@ -38,11 +51,13 @@
   color: blue !important;
 }
 
+
 /******** Text Decoration ********/
 
 .underline {
   text-decoration: underline;
 }
+
 
 /******** Margins ********/
 .mb5 {
@@ -222,6 +237,8 @@
 .pr30 {
   padding-right: 30px;
 }
+
+
 /******** Fonts ********/
 
 .fsize-5 {
