@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # resource routes
   resources :users
-  resources :sessions, only: [:new]
+  resources :sessions, only: [:new, :create]
 
   resources :registrations, only: [:new, :create] do
     collection do
