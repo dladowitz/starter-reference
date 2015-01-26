@@ -14,6 +14,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find_by_id params[:id]
+
+    if @user
+      render layout: "landing_page/landing_layout"
+    else
+      redirect_to root_path
+    end
+  end
+
   private
 
   def user_params

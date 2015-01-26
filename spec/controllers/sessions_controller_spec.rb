@@ -17,12 +17,16 @@ describe SessionsController do
       subject { post :create, {email: user.email, password: "asdfasdf"} }
       before { subject }
 
+      it "sets the session id to the user id" do
+        expect(session[:id]).to eq user.id
+      end
+
       it "displays a flash message" do
-        expect(flash[:success]).to eq "Nice. Logged in Successfully."
+        expect(flash[:success]).to eq "Welcome, #{user.first_name}"
       end
 
       it "redirects to the user show page" do
-        expect(response).to redirect_to users_path(user)
+        expect(response).to redirect_to user_path(user)
       end
 
       it "finds the user" do
@@ -39,7 +43,11 @@ describe SessionsController do
       end
 
       it "rerenders the signing page" do
-        expect(response).to render_template :new
+        expect(response).to redirect_to signin_path
+      end
+
+      it "does not set session[:id]" do
+        expect(session[:id]).to be_nil
       end
     end
   end

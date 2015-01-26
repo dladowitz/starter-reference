@@ -3,6 +3,7 @@ And /they click on the signin link/ do
 end
 
 And /they fill out the signin form/ do
+
   uri = URI.parse(current_url)
   expect(uri.path).to eq signin_path
 
@@ -14,11 +15,7 @@ And /they fill out the signin form/ do
 end
 
 Then /they are logged into the site/ do
-
-  # session_id should match user
-  uri = URI.parse(current_url)
-  expect(uri.path).to eq user_path(current_user)
-
+  expect(page).to have_content "Welcome, Andre"
 end
 
 Then /they click the logout link/ do
