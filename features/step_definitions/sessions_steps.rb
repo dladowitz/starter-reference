@@ -3,12 +3,13 @@ And /they click on the signin link/ do
 end
 
 And /they fill out the signin form/ do
+  user = users(:ampere)
 
   uri = URI.parse(current_url)
   expect(uri.path).to eq signin_path
 
   # Need to create users in test db
-  fill_in "email",                 with: "Andre.Ampere@gmail.com"
+  fill_in "email",                 with: user.email
   fill_in "password",              with: "asdfasdf"
 
   click_button "Sign In"
