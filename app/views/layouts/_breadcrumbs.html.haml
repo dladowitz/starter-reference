@@ -1,9 +1,9 @@
 .row.wrapper.border-bottom.white-bg.page-heading
   .col-lg-10
-    %h2 Basic Form
+    %h2= @page_name
     %ol.breadcrumb
       %li
-        %a{:href => "index.html"} Home
+        = link_to "Home", user_path(session[:id])
       %li
         %a Forms
       %li.active

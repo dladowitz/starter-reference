@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+
+    render layout: "landing_page/landing_layout"
   end
 
   def create
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @page_name = "Homepage"
     @user = User.find_by_id params[:id]
 
     if @user

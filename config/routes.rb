@@ -8,14 +8,13 @@ Rails.application.routes.draw do
 
   # resource routes
   resources :users
-  resources :sessions, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
 
   resources :registrations, only: [:new, :create] do
     collection do
       get :confirmation, to: "registrations#confirmation"
     end
   end
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

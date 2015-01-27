@@ -16,4 +16,15 @@ class SessionsController < ApplicationController
       redirect_to signin_path
     end
   end
+
+  def destroy
+    if session[:id]
+      session[:id] = nil
+      flash[:success] = "Bye Bye. Have fun storming the castle."
+    else
+      flash[:danger] = "Errr, you can't log out when you aren't logged in. That's science."
+    end
+
+    redirect_to signin_path
+  end
 end

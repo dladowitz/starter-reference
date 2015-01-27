@@ -19,7 +19,7 @@ Then /they are logged into the site/ do
 end
 
 Then /they click the logout link/ do
-  click_link "signout"
+  click_link "Sign Out"
 
 end
 
@@ -27,5 +27,5 @@ Then /they are logged out of the site/ do
 
   # verify the session_id is nil
   uri = URI.parse(current_url)
-  expect(uri.path).to eq root_path
+  expect(uri.path).to eq signin_path
 end

@@ -51,4 +51,43 @@ describe SessionsController do
       end
     end
   end
+
+  describe "DELETE destroy" do
+    subject { delete :destroy, {id: user.id} }
+    let(:user) { create :user }
+
+    context "with an authenticated user" do
+      before :each do
+        session[:id] = user.id
+        subject
+      end
+
+      it "sets the session[:id] to nil" do
+        expect(session[:id]).to be_nil
+      end
+
+      it "sets a flash message" do
+        expect(flash[:success]).to eq "Bye Bye. Have fun storming the castle."
+      end
+
+      it "redirects to the signin page" do
+        expect(response).to redirect_to signin_path
+      end
+    end
+
+    context "without an authenticated user" do
+      before :each do
+        session[:id] = nil
+        subject
+      end
+
+      it "sets a flash message" do
+        expect(flash[:danger]).to eq "Errr, you can't log out when you aren't logged in. That's science."
+      end
+
+      it "redirects to the signin page" do
+        expect(response).to redirect_to signin_path
+      end
+    end
+  end
 end

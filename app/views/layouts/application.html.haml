@@ -6,7 +6,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = render "layouts/flash_messages"
 
     #wrapper
       = render "layouts/sidebar"
@@ -14,6 +13,7 @@
       #page-wrapper.gray-bg
         = render "layouts/topbar"
         = render "layouts/breadcrumbs"
+        = render "layouts/flash_messages"
 
         .wrapper.wrapper-content.animated.fadeInRight
           = yield
