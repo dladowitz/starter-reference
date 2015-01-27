@@ -6,6 +6,7 @@
     = csrf_meta_tags
 
   %body
+    -#TODO look at rendering flash partial instead. Might have been a problem or something
     - flash.each do |name, message|
       %strong
         %div{:class => "alert alert-#{name}", :role => "alert"}

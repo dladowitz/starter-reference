@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id params[:id]
 
     if @user
-      render layout: "landing_page/landing_layout"
+      render :show
     else
       redirect_to root_path
     end
